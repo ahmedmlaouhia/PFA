@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ajouterController">
+   <center>
+      <Pane fx:id="addpannel" prefHeight="450.0" prefWidth="750.0" style="-fx-background-color: #ededed;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="295.0" layoutY="53.0" style="-fx-font-weight: bold;" text="Ajouter outils">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="type" layoutX="295.0" layoutY="145.0" />
+            <TextField fx:id="nombre" layoutX="295.0" layoutY="188.0" />
+            <Label layoutX="210.0" layoutY="188.0" text="Nombre">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="210.0" layoutY="145.0" text="Type">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnClick" layoutX="559.0" layoutY="323.0" mnemonicParsing="false" onAction="#valider" style="-fx-background-color: rgb(50,150,255);" text="Valider" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="15.07" offsetX="2.0" offsetY="2.0" radius="7.775" width="18.03">
+                     <color>
+                        <Color opacity="0.46086955070495605" />
+                     </color></DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="annuler" layoutX="414.0" layoutY="323.0" mnemonicParsing="false" onAction="#annuler" style="-fx-background-color: rgb(50,150,255);" text="annuler" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="15.07" offsetX="2.0" offsetY="2.0" radius="7.775" width="18.03">
+                     <color>
+                        <Color opacity="0.46086955070495605" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label fx:id="numError" layoutX="472.0" layoutY="192.0" textFill="#ff1e00" />
+            <Label fx:id="typeError" layoutX="472.0" layoutY="150.0" textFill="#ff1e00" />
+            <Label fx:id="success" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="259.0" prefHeight="17.0" prefWidth="160.0" textAlignment="CENTER" textFill="#29f505" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
